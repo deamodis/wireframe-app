@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import getDataFromJSON from './configuration/request_to_server' // get JSON via XHR and parse it
+import reducer from './reducers/index' // get custom reducer
 
 
 
