@@ -36,11 +36,11 @@ class sidebar extends React.Component{
         }
 
         return (<div>
-                    <Search/>
-                    <ul className="clients_list">
-                        {newListItems}
-                    </ul>
-                </div>);
+            <Search/>
+            <ul className="clients_list">
+                {newListItems}
+            </ul>
+        </div>);
     }
 }
 

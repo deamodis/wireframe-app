@@ -14,10 +14,14 @@ class client extends React.Component {
 
 
     render(){
-       let clientData =  this.props.clients[this.props.id];
+        let clientData =  this.props.clients[this.props.id];
 
         return (<li onClick={this.handleClick} id={this.props.id}>
-           {clientData.general.firstName}
+            <img src={clientData.general.avatar} alt={clientData.general.avatar}/>
+            <div className="person_info">
+                <div className="name">{clientData.general.firstName}</div>
+                <div className="job_title">{clientData.job.title}</div>
+            </div>
         </li>)
     }
 }
@@ -26,8 +30,8 @@ class client extends React.Component {
 export default connect(
     state => ( {clients: state.clients, filter: state.filter} ),
     dispatch => ({
-         onClickItem: (itemIndex) => {
-             dispatch({type:"bla-bla",payload: itemIndex})
-         }
+        onClickItem: (itemIndex) => {
+            dispatch({type:"bla-bla",payload: itemIndex})
+        }
     })
 )(client);

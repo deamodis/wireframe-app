@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-
 class Search extends React.Component{
 
 
@@ -11,8 +10,8 @@ class Search extends React.Component{
 
     render(){
         return (<form>
-                     <input type="text" onChange={this.handleChange.bind(this)} ref={(input) => this.input = input}/>
-               </form>)
+            <input placeholder="Search" className="search" type="text" onChange={this.handleChange.bind(this)} ref={(input) => this.input = input}/>
+        </form>)
     }
 }
 

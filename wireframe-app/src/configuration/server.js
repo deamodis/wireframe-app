@@ -22,4 +22,4 @@ function accept(req, res) {
 
 http.createServer(accept).listen(8081);
 
-console.log('server is running (port 8081)');
+console.log('server is running (port 8081)')

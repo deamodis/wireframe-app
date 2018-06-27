@@ -4,6 +4,6 @@ import filter from './filter'
 
 export default combineReducers(
     {clients,
-    filter});
+        filter});
 
 
