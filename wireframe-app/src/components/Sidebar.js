@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Client from './client';
 import { Link } from 'react-router-dom'
 import Search from './search'
-
+import {  Item } from 'semantic-ui-react'
 
 class sidebar extends React.Component{
 
@@ -34,12 +34,12 @@ class sidebar extends React.Component{
         for(let i = 0; i < listItems.length; i++){
             newListItems[i] = listItems[ indicesFilterElements[index++] ]
         }
-
+            ///////////////////////////////////////////////////////////////////////////////////////////////
         return (<div>
             <Search/>
-            <ul className="clients_list">
+            <Item.Group extra divided="true" className="clients_list">
                 {newListItems}
-            </ul>
+            </Item.Group>
         </div>);
     }
 }

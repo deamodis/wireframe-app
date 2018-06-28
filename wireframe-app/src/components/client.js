@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Image, Item } from 'semantic-ui-react'
 
 class client extends React.Component {
     constructor(props){
@@ -16,13 +17,13 @@ class client extends React.Component {
     render(){
         let clientData =  this.props.clients[this.props.id];
 
-        return (<li onClick={this.handleClick} id={this.props.id}>
-            <img src={clientData.general.avatar} alt={clientData.general.avatar}/>
-            <div className="person_info">
-                <div className="name">{clientData.general.firstName}</div>
-                <div className="job_title">{clientData.job.title}</div>
-            </div>
-        </li>)
+        return (<Item  onClick={this.handleClick} id={this.props.id}>
+            <Item.Image size='tiny' src={clientData.general.avatar} alt={clientData.general.avatar}/>
+            <Item.Content>
+                <Item.Header className="name">{clientData.general.firstName}</Item.Header>
+                <Item.Meta className="job_title">{clientData.job.title}</Item.Meta>
+            </Item.Content>
+        </Item>)
     }
 }
 

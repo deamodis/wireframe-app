@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter , Route} from 'react-router-dom';
+import { Grid, Image } from 'semantic-ui-react'
 
 import getDataFromJSON from './configuration/request_to_server' // get JSON via XHR and parse it
 import reducer from './reducers/index' // get custom reducer
@@ -18,10 +19,16 @@ getDataFromJSON(store);
 
 ReactDOM.render(<Provider store={store}>
     <BrowserRouter>
-        <div className="wrapper">
-            <App/>
-            <Route path="/item-detail/:id" component={itemDetail}/>
-        </div>
+        <Grid columns={2} divided>
+            <Grid.Row/>
+                <Grid.Column padded={1} textAlign="left" width={3}>
+                    <App/>
+                </Grid.Column>
+                <Grid.Column width={13}>
+                    <Route path="/item-detail/:id" component={itemDetail}/>
+                </Grid.Column>
+            <Grid.Row/>
+        </Grid>
     </BrowserRouter>
 </Provider>, document.getElementById('root'));
 
