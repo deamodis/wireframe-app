@@ -20,7 +20,7 @@ class client extends React.Component {
         return (<Item  onClick={this.handleClick} id={this.props.id}>
             <Item.Image size='tiny' src={clientData.general.avatar} alt={clientData.general.avatar}/>
             <Item.Content>
-                <Item.Header className="name">{clientData.general.firstName}</Item.Header>
+                <Item.Header className="name">{clientData.general.firstName + " " + clientData.general.lastName}</Item.Header>
                 <Item.Meta className="job_title">{clientData.job.title}</Item.Meta>
             </Item.Content>
         </Item>)
@@ -32,7 +32,7 @@ export default connect(
     state => ( {clients: state.clients, filter: state.filter} ),
     dispatch => ({
         onClickItem: (itemIndex) => {
-            dispatch({type:"bla-bla",payload: itemIndex})
+            dispatch({type:"select",payload: itemIndex})
         }
     })
 )(client);

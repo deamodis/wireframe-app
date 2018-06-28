@@ -19,15 +19,15 @@ getDataFromJSON(store);
 
 ReactDOM.render(<Provider store={store}>
     <BrowserRouter>
-        <Grid columns={2} divided>
-            <Grid.Row/>
-                <Grid.Column padded={1} textAlign="left" width={3}>
+        <Grid className="main_section" columns={2} divided>
+            <Grid.Row >
+                <Grid.Column className="sideBar" padded={1} textAlign="left" width={3}>
                     <App/>
                 </Grid.Column>
                 <Grid.Column width={13}>
                     <Route path="/item-detail/:id" component={itemDetail}/>
                 </Grid.Column>
-            <Grid.Row/>
+            </Grid.Row>
         </Grid>
     </BrowserRouter>
 </Provider>, document.getElementById('root'));

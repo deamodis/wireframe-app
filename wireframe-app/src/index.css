@@ -1,0 +1,26 @@
+form{
+    padding-left: 20px;
+    background-color: #F2F2F2;
+}
+
+.sideBar{
+    background-color: #F2F2F2;
+}
+
+.main_section{
+    padding-top: 20px;
+}
+
+.item{
+    border-bottom: 1px solid #E0E0E1;
+    padding: 10px 0;
+}
+
+.clients_list{
+    padding-left:20px;
+    background-color: #F2F2F2;
+}
+
+.detailed_information{
+    padding-left: 40px;
+}
